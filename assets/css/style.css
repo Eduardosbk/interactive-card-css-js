@@ -1,0 +1,34 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #121212;
+  max-width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 400px;
+}
+
+.container {
+  width: 250px;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+svg {
+  --position-x: 0;
+  --angle-y: calc(var(--position-x) * 10deg);
+
+  --postion-y: 0;
+  --angle-x: calc(var(--position-y) * 10deg);
+  transform: perspective(200px) rotateY(var(--angle-y)) rotateX(var(--angle-x));
+}
